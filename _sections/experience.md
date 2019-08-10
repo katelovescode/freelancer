@@ -1,10 +1,9 @@
 ---
-layout: page
 title: Experience
-permalink: /experience/
+slug: experience
 ---
 
-## Title
+## Job Title
 
 ### Company
 _Month Year - Month Year | Location_
@@ -18,7 +17,7 @@ _Month Year - Month Year | Location_
 - accomplishment
 - accomplishment
 
-## Title
+## Job Title
 
 ### Company
 _Month Year - Month Year | Location_

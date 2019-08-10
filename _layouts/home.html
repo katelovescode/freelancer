@@ -2,6 +2,14 @@
 layout: default
 ---
 
+{% include navigation.html %}
+
+<h2>{{ site.description }}</h2>
+
+<button>Hire me!</button>
+
+<h3>{{ site.slogan }}</h3>
+
 {% assign sections = site.sections | sort: 'order' %}
 {% for section in sections %}
   {% if section.include != null %}

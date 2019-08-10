@@ -1,0 +1,4 @@
+{% assign sections = site.sections | sort: 'order' %}
+{% for section in sections %}
+  <a href="#{{ section.slug }}">{{ section.title }}</a>
+{% endfor %}

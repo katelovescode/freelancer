@@ -1,13 +1,8 @@
 ---
-layout: page
-title: About
-permalink: /about/
+title: About Me
+slug: about
 ---
 
-## About Me
-
 Here's some info about me
-
-## Values
 
 Here's some info about my values

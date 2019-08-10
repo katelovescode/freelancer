@@ -1,7 +1,6 @@
 ---
-layout: page
 title: Contributions
-permalink: /contributions/
+slug: contributions
 ---
 
 ## Code
