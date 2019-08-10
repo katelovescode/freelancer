@@ -3,18 +3,26 @@ layout: default
 ---
 
 {% include navigation.html %}
-
-<h2>{{ site.description }}</h2>
-
-<button>Hire me!</button>
-
-<h3>{{ site.slogan }}</h3>
+<section id="landing" class="content-section-landing">
+  <div>
+    <h2>{{ site.description }}</h2>
+    <button>Hire me!</button>
+    <h3>{{ site.slogan }}</h3>
+  </div>
+</section>
 
 {% assign sections = site.sections | sort: 'order' %}
 {% for section in sections %}
+  {% assign remainder = forloop.index | modulo: 2 %}
+  {% if remainder == 0 %}
+    <section id="{{ section.title | slugify }}" class="content-section-even">
+  {% else %}
+    <section id="{{ section.title | slugify }}" class="content-section-odd">
+  {% endif %}
   {% if section.include != null %}
     {% include {{ section.include }} %}
   {% else %}
     {% include sections/default.html %}
   {% endif %}
+  </section>
 {% endfor %}

@@ -1,4 +1,8 @@
-{% assign sections = site.sections | sort: 'order' %}
-{% for section in sections %}
-  <a href="#{{ section.slug }}">{{ section.title }}</a>
-{% endfor %}
+<section id="navigation" class="content-section-navigation">
+  <div>
+    {% assign sections = site.sections | sort: 'order' %}
+    {% for section in sections %}
+      <a href="#{{ section.slug }}">{{ section.title }}</a>
+    {% endfor %}
+  </div>
+</section>
