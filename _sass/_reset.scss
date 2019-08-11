@@ -15,3 +15,25 @@ body {
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
+
+// Restore list style types and margins
+ul, ol { 
+  display: block;
+  list-style: disc outside none;
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+ol { 
+  list-style-type: decimal;
+}
+li { 
+  display: list-item;
+}
+ul ul, ol ul {
+  list-style-type: circle;
+  margin-left: 15px; 
+}
+ol ol, ul ol { 
+  list-style-type: lower-latin;
+  margin-left: 15px; 
+}

@@ -1,8 +1,8 @@
 ---
-name: Org 2
+name: Org 3
 role: My Role Title
 url: http://my.org.url/
-order: 2
+order: 3
 ---
 Description of the org and what I've accomplished including a few bullets:
 
