@@ -1,6 +1,5 @@
 ---
 title: Experience
-slug: experience
 ---
 
 ## Job Title

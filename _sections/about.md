@@ -1,6 +1,5 @@
 ---
 title: About Me
-slug: about
 ---
 
 Here's some info about me

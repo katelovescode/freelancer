@@ -1,6 +1,5 @@
 ---
 title: Contributions
-slug: contributions
 ---
 
 ## Code

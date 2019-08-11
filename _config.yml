@@ -18,7 +18,7 @@ author: Your Name
 email: your@email.com
 slogan: quippy slogan here
 description: >- # this means to ignore newlines until "baseurl:"
-  Your Job Title
+  Longer description of your site and skills goes here probably
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://yoururl.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yourtwittername

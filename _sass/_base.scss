@@ -1,45 +1,8 @@
-$font-stack:    Georgia, serif;
-$primary-color: #927328;
+$primary-color: #fdcd3b;
+$secondary-color: #ffed4b;
+$nav-background: rgba(0,0,0,.75);
+$nav-link-color: #fff;
 
-body {
-  font: 100% $font-stack;
-  margin: 0;
-  color: $primary-color;
-}
-
-.centered {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 50%;
-}
-
-#landing {
-  overflow:hidden;
-  width: 100%;
-  background-image: url("/assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -webkit-filter: grayscale(50%) blur(2px); /* Safari 6.0 - 9.0 */
-  filter: grayscale(50%) blur(2px);
-  img#headshot {
-    width: 300px;
-  }
-  #title-headshot {
-    float: right;
-    position: relative;
-    width: 50%;
-    height: 800px;
-    text-align: center;
-    margin: auto;
-  }
-  #slogan {
-    position: relative;
-    height: 800px;
-    text-align: center;
-    margin: auto;
-  }
+a {
+  text-decoration: none;
 }
