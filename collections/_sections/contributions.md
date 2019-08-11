@@ -1,17 +1,8 @@
 ---
 title: Contributions
+order: 2
+include: sections/contributions-list.html
 ---
-
-## Code
-
-### [My App](http://github.com/username/repo)
-Description of my app
-
-### [My App](http://github.com/username/repo)
-Description of my app
-
-### [My App](http://github.com/username/repo)
-Description of my app
 
 ## Organizations
 

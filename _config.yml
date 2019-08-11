@@ -28,8 +28,14 @@ github_username:  yourgithubname
 markdown: kramdown
 sass:
   style: compressed
+collections_dir: collections
 collections:
+  - articles
+  - experiences
+  - organizations
+  - projects
   - sections
+  - talks
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

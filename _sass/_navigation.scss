@@ -79,6 +79,9 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
+  i {
+    color: $secondary-color;
+  }
   #title {
     text-align: right;
     width: 100%;

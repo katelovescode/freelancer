@@ -1,8 +1,11 @@
-$primary-color: #fdcd3b;
-$secondary-color: #ffed4b;
+$primary-color: #fefcfb;
+$secondary-color: #3D2B3D;
 $nav-background: rgba(0,0,0,.75);
-$nav-link-color: #fff;
+$nav-link-color: $primary-color;
 
 a {
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
