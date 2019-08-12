@@ -1,5 +1,4 @@
 <div class="experiences-list">
-  <h2><a name="{{ section.slug }}">{{ section.title }}</a></h2>
   {% assign experiences = site.experiences | sort: "order"  %}
   {% for experience in experiences %}
     <div class="experience-item">

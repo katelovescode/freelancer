@@ -24,6 +24,7 @@ layout: default
   {% else %}
     <section id="{{ section.title | slugify }}" class="content-section content-section-odd">
   {% endif %}
+  <a name="{{ section.title | slugify }}"></a><h2>{{ section.title }}</h2>
   {% if section.include != null %}
     {% include {{ section.include }} %}
   {% else %}
