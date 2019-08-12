@@ -6,8 +6,11 @@
       <h3>Projects</h3>
       {% assign projects = site.projects | sort: "order"  %}
       {% for project in projects %}
-        <h4>{% if project.url !="" %}<a href="{{ project.url }}">{% endif %}{{ project.title }}{% if project.url !="" %}</a>{% endif %}</h4>
-        <p>{{ project }}</p>
+        <div class="contribution-item">
+          <h4>{% if project.url %}<a href="{{ project.url }}">{% endif %}{{ project.title }}{% if project.url %}</a>{% endif %}</h4>
+          {% if project.stack %}<h5>{{ project.stack }}</h5>{% endif %}
+          {{ project }}
+        </div>
       {% endfor %}
     </div>
     
@@ -15,9 +18,11 @@
       <h3>Organizations</h3>
       {% assign organizations = site.organizations | sort: "order"  %}
       {% for organization in organizations  %}
-        <h4>{% if organization.url %}<a href="{{ organization.url }}">{% endif %}{{ organization.title }}{% if organization.url %}</a>{% endif %}</h4>
-        {% if organization.role %}<h5>{{ organization.role }}</h5>{% endif %}
-        <p>{{ organization }}</p>
+        <div class="contribution-item">
+          <h4>{% if organization.url %}<a href="{{ organization.url }}">{% endif %}{{ organization.title }}{% if organization.url %}</a>{% endif %}</h4>
+          {% if organization.role %}<h5>{{ organization.role }}</h5>{% endif %}
+          {{ organization }}
+        </div>
       {% endfor %}
     </div>
     
@@ -25,9 +30,11 @@
       <h3>Talks</h3>
       {% assign talks = site.talks | sort: "order"  %}
       {% for talk in talks  %}
-        <h4>{% if talk.videolink %}<a href="{{ talk.videolink }}">{% endif %}{{ talk.title }}{% if talk.videolink %}</a>{% endif %}</h4>
-        <h5>{% if talk.event %}{% if talk.eventurl %}<a href="{{ talk.eventurl }}">{% endif %}{{ talk.event }}{% if talk.eventurl %}</a>{% endif %}{% endif %}{% if talk.event and talk.date %} | {% endif %}{% if talk.date %}{{ talk.date | date: "%b %d, %Y" }}{% endif %}</h5>
-        <p>{{ talk }}</p>
+        <div class="contribution-item">
+          <h4>{% if talk.videolink %}<a href="{{ talk.videolink }}">{% endif %}{{ talk.title }}{% if talk.videolink %}</a>{% endif %}</h4>
+          <h5>{% if talk.event %}{% if talk.eventurl %}<a href="{{ talk.eventurl }}">{% endif %}{{ talk.event }}{% if talk.eventurl %}</a>{% endif %}{% endif %}{% if talk.event and talk.date %} | {% endif %}{% if talk.date %}{{ talk.date | date: "%b %d, %Y" }}{% endif %}</h5>
+          {{ talk }}
+        </div>
       {% endfor %}
     </div>
     
@@ -35,8 +42,11 @@
       <h3>Articles</h3>
       {% assign articles = site.articles | sort: "order"  %}
       {% for article in articles | sort: article.order  %}
-        <h4>{% if article.url %}<a href="{{ article.url }}">{% endif %}{{ article.title }}{% if article.url %}</a>{% endif%}</h4>
-        <h5>{% if article.publication %}{% if article.publicationurl %}<a href="{{ article.publicationurl }}">{% endif %}{{ article.publication }}{% if article.publicationurl %}</a>{% endif %}{% endif %}{% if article.publication and article.date %} | {% endif %}{% if article.date %}{{ article.date | date: "%b %d, %Y" }}{% endif %}</h5>
+        <div class="contribution-item">
+          <h4>{% if article.url %}<a href="{{ article.url }}">{% endif %}{{ article.title }}{% if article.url %}</a>{% endif%}</h4>
+          <h5>{% if article.publication %}{% if article.publicationurl %}<a href="{{ article.publicationurl }}">{% endif %}{{ article.publication }}{% if article.publicationurl %}</a>{% endif %}{% endif %}{% if article.publication and article.date %} | {% endif %}{% if article.date %}{{ article.date | date: "%b %d, %Y" }}{% endif %}</h5>
+          {{ article }}
+        </div>
       {% endfor %}
     </div>
   </div>

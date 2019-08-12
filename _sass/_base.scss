@@ -1,11 +1,24 @@
 $primary-color: #fefcfb;
-$secondary-color: #3D2B3D;
-$nav-background: rgba(0,0,0,.75);
+$secondary-color: #2a2a2a;
+// $accent-color: #A8C738;
+$accent-color: #CCB80A;
+$nav-background: $secondary-color;
 $nav-link-color: $primary-color;
 
 a {
   text-decoration: none;
+  color: $accent-color;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+#home {
+  a {
+    color: $accent-color;
   }
 }

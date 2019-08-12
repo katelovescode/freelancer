@@ -3,6 +3,9 @@ $section-padding-desktop: 3em;
 
 .content-section {
   padding: $section-padding-mobile;
+  h2 {
+    margin-bottom: 1em;
+  }
   @media (min-width: 768px) {
     padding: $section-padding-desktop;
   }
@@ -12,7 +15,9 @@ $section-padding-desktop: 3em;
   background: $secondary-color;
   color: $primary-color;
   a {
-    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 
@@ -20,7 +25,9 @@ $section-padding-desktop: 3em;
   background: $primary-color;
   color: $secondary-color;
   a {
-    color: $secondary-color;
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }
 
@@ -49,20 +56,38 @@ $section-padding-desktop: 3em;
   &::-webkit-scrollbar {
     display: none;
   }
+  a {
+    color: $accent-color;
+  }
   .content-container {
     display: flex;
     div {
-      min-width: 400px;
-      margin: 5px;
+      min-width: 20em;
+      margin-right: 1.5em;
+      & > *:not(:last-child) {
+        padding-bottom: .75em;
+      }
+      .contribution-item {
+        padding: 1em 1em 1em 0;
+        border-bottom: 1px solid $primary-color;
+      }
+      .contribution-item:last-of-type {
+        border-bottom: 0;
+      }
     }
   }
   @media (min-width: 768px) {
     .content-container {
-      max-width: 100%;
       div {
         min-width: 0;
         flex: 1;
       }
     }
+  }
+}
+
+.experience-item {
+  & > *:not(:last-child) {
+    padding-bottom: .75em;
   }
 }

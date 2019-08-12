@@ -1,0 +1,12 @@
+<div class="experiences-list">
+  <h2><a name="{{ section.slug }}">{{ section.title }}</a></h2>
+  {% assign experiences = site.experiences | sort: "order"  %}
+  {% for experience in experiences %}
+    <div class="experience-item">
+      <h3>{{ experience.title }}</h3>
+      <h4>{% if experience.companyurl %}<a href="{{ experience.companyurl }}">{% endif %}{{ experience.company }}{% if experience.companyurl %}</a>{% endif %}</h4>
+      <h5>{% if experience.dates %}{{ experience.dates }}{% endif %}{% if experience.dates and experience.location %} | {% endif %}{% if experience.location %}{{ experience.location }}{% endif %}</h5>
+      {{ experience }}
+    </div>
+  {% endfor %}
+</div>
