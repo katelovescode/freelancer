@@ -50,6 +50,16 @@ $section-padding-desktop: 3em;
   }
 }
 
+// border colors for alternating rows
+.content-section-odd .contribution-item, .content-section-odd .experience-item {
+  padding: 1em 1em 1em 0;
+  border-bottom: 1px solid $secondary-color;
+}
+.content-section-even .contribution-item, .content-section-even .experience-item {
+  padding: 1em 1em 1em 0;
+  border-bottom: 1px solid $primary-color;
+}
+
 .contributions-list {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -67,10 +77,6 @@ $section-padding-desktop: 3em;
       & > *:not(:last-child) {
         padding-bottom: .75em;
       }
-      .contribution-item {
-        padding: 1em 1em 1em 0;
-        border-bottom: 1px solid $primary-color;
-      }
       .contribution-item:last-of-type {
         border-bottom: 0;
       }
@@ -86,8 +92,13 @@ $section-padding-desktop: 3em;
   }
 }
 
-.experience-item {
-  & > *:not(:last-child) {
-    padding-bottom: .75em;
+.experiences-list {
+  .experience-item {
+    & > *:not(:last-child) {
+      padding-bottom: .75em;
+    }
+  }
+  .experience-item:last-of-type {
+    border-bottom: 0;
   }
 }
