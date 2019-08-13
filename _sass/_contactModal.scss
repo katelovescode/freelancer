@@ -43,13 +43,23 @@
       padding: .5em;
       width: 100%;
       margin: 1em 0;
-    }
-    textarea {
-      height: 4em;
+      border-radius: 0;
+      border: 1px solid $secondary-color;
+      -webkit-appearance: none;
     }
     input[type="submit"] {
       width: 5em;
       margin: 0 auto;
+      padding: .7em;
+      background-color: $accent-color;
+      border: 0;
+      text-transform: uppercase;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 60%;
+    .contact-form {
+      padding: 2em;
     }
   }
 }
