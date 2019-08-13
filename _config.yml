@@ -15,8 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title: Your Name
 author: Your Name
-email: your@email.com
+email: kate@katelovescode.com
 slogan: quippy slogan here
+briskformscode: 1e3a7e673c4c72d7a1d7dbc80409a9de
 description: >- # this means to ignore newlines until "baseurl:"
   Longer description of your site and skills goes here probably
 baseurl: "/" # the subpath of your site, e.g. /blog
