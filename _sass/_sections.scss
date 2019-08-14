@@ -70,9 +70,10 @@ $section-padding-desktop: 3em;
   }
   .content-container {
     display: flex;
+    $contribution-margin: 2em;
     div {
-      min-width: 20em;
-      margin-right: 1.5em;
+      width: calc(100vw - #{$contribution-margin});
+      margin-right: $contribution-margin;
       & > *:not(:last-child) {
         padding-bottom: .75em;
       }
