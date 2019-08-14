@@ -1,0 +1,11 @@
+<div class="projects">
+    <h3>Projects</h3>
+    {% assign projects = site.projects | sort: "order"  %}
+    {% for project in projects %}
+      <div class="contribution-item">
+        <h4>{% if project.url %}<a href="{{ project.url }}">{% endif %}{{ project.title }}{% if project.url %}</a>{% endif %}</h4>
+        {% if project.stack %}<h5>{{ project.stack }}</h5>{% endif %}
+        {{ project }}
+      </div>
+    {% endfor %}
+  </div>

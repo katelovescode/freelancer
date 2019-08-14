@@ -1,0 +1,11 @@
+- type: projects
+  order: 1
+
+- type: organizations
+  order: 2
+
+- type: talks
+  order: 3
+
+- type: articles
+  order: 4
