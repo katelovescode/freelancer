@@ -11,14 +11,15 @@
         <div class="contact-form">
           <h4>Let's work together!</h4>
           <p>{{ site.description }}</p>
-          <form method="post" action="https://briskforms.com/go/{{ site.briskformscode }}">
+          <form method="post" id="contact-form" action="https://briskforms.com/go/{{ site.briskformscode }}">
             <label for="name">Your name</label>
             <input id="name" type="text" name="name" placeholder="Your name">
             <label for="contact-email">Your email</label>
             <input id="contact-email" type="email" name="contact-email" placeholder="Your email">
+            <input aria-label="Hidden field, do not fill" aria-hidden="true" id="no-entry" type="text" name="no-entry" />
             <label for="comment">Tell me a little about the project or organization you'd like to discuss.</label>
             <textarea id="comment" name="comment" placeholder="Tell me a little about the project or organization you'd like to discuss." rows="8"></textarea>
-            <input type="submit" value="Send">
+            <input id="submit" type="submit" value="Send">
           </form>
         </div>
       </div>

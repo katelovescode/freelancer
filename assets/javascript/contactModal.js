@@ -6,15 +6,18 @@ var email = document.getElementById("email");
 var span = document.getElementsByClassName("close")[0];
 
 email.onclick = function() {
-  modal.style.display = "block";
+  show_modal();
+  validate_form();
 }
 
 hireButton.onclick = function() {
-  modal.style.display = "block";
+  show_modal();
+  validate_form();
 }
 
 hireNav.onclick = function() {
-  modal.style.display = "block";
+  show_modal();
+  validate_form();
 }
 
 span.onclick = function() {
@@ -31,6 +34,21 @@ window.onclick = function(event) {
   }
 }
 
+function show_modal() {
+  modal.style.display = "block";
+}
+
 function close_modal() {
   modal.style.display == "block" ? modal.style.display = "none" : modal.style.display = "block"
+}
+
+function validate_form() {
+  var form = document.getElementById("contact-form");
+  var catchEntry = document.getElementById("no-entry");
+  
+  form.addEventListener("submit", function (event) {
+    if (catchEntry.value != "") {
+      event.preventDefault();
+    }
+  }, false);
 }
