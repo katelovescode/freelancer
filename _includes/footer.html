@@ -1,8 +1,8 @@
     <div id="footer">
       <div id="contact-box">
-        {% if site.twitter_username %}<div id="twitter" class="contact-icon"><a href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a></div>{% endif %}
-        {% if site.github_username %}<div id="github" class="contact-icon"><a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a></div>{% endif %}
-        {% if site.email %}<div id="email" class="contact-icon"><a href="#contact-modal"><i class="far fa-envelope"></i></a></div>{% endif %}
+        {% if site.twitter_username %}<div id="twitter" class="contact-icon"><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" aria-label="Find me on Twitter"><i class="fab fa-twitter"></i></a></div>{% endif %}
+        {% if site.github_username %}<div id="github" class="contact-icon"><a href="https://github.com/{{ site.github_username }}" target="_blank" aria-label="Find me on Github"><i class="fab fa-github"></i></a></div>{% endif %}
+        {% if site.email %}<div id="email" class="contact-icon"><a href="#contact-modal" aria-label="Contact me to work together!"><i class="far fa-envelope"></i></a></div>{% endif %}
       </div>
     </div>
     <div id="contact-modal">
@@ -14,8 +14,8 @@
           <form method="post" action="https://briskforms.com/go/{{ site.briskformscode }}">
             <label for="name">Your name</label>
             <input id="name" type="text" name="name" placeholder="Your name">
-            <label for="email">Your email</label>
-            <input id="email" type="email" name="email" placeholder="Your email">
+            <label for="contact-email">Your email</label>
+            <input id="contact-email" type="email" name="contact-email" placeholder="Your email">
             <label for="comment">Tell me a little about the project or organization you'd like to discuss.</label>
             <textarea id="comment" name="comment" placeholder="Tell me a little about the project or organization you'd like to discuss." rows="8"></textarea>
             <input type="submit" value="Send">

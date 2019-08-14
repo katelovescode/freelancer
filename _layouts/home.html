@@ -3,32 +3,33 @@ layout: default
 ---
 
 {% include navigation.html %}
-
-<a class="anchor" name="home"></a>
-<section id="home-section">
-  <div id="title-photo">
-    <img id="photo" src="/assets/images/photo.jpg" />
-    <h2>{{ site.slogan }}</h2>
-  </div>
-  <div id="slogan">
-    <div id="hire-button"><a href="#contact-modal">Let's Work Together!</a></div>
-    <h3>{{ site.description }}</h3>
-  </div>
-</section>
-
-{% assign sections = site.sections | sort: 'order' %}
-{% for section in sections %}
-  {% assign remainder = forloop.index | modulo: 2 %}
-  {% if remainder == 0 %}
-    <section id="{{ section.title | slugify }}-section" class="content-section content-section-even">
-  {% else %}
-    <section id="{{ section.title | slugify }}-section" class="content-section content-section-odd">
-  {% endif %}
-  <a class="anchor" name="{{ section.title | slugify }}"></a><h2>{{ section.title }}</h2>
-  {% if section.include != null %}
-    {% include {{ section.include }} %}
-  {% else %}
-    {% include sections/default.html %}
-  {% endif %}
+<div class="content">
+  <a class="anchor" name="home"></a>
+  <section id="home-section">
+    <div id="title-photo">
+      <img id="photo" src="/assets/images/photo.jpg" alt="{% if site.photo_description %}{{ site.photo_description}}{% else %}photo of the freelancer{% if site.author %}, {{ site.author }}{% endif %}{% endif %}" />
+      <h2>{{ site.slogan }}</h2>
+    </div>
+    <div id="slogan">
+      <div id="hire-button"><a href="#contact-modal">Let's Work Together!</a></div>
+      <h3>{{ site.description }}</h3>
+    </div>
   </section>
-{% endfor %}
+  
+  {% assign sections = site.sections | sort: 'order' %}
+  {% for section in sections %}
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 0 %}
+      <section id="{{ section.title | slugify }}-section" class="content-section content-section-even">
+    {% else %}
+      <section id="{{ section.title | slugify }}-section" class="content-section content-section-odd">
+    {% endif %}
+    <a class="anchor" name="{{ section.title | slugify }}"></a><h2>{{ section.title }}</h2>
+    {% if section.include != null %}
+      {% include {{ section.include }} %}
+    {% else %}
+      {% include sections/default.html %}
+    {% endif %}
+    </section>
+  {% endfor %}
+</div>

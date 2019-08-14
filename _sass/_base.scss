@@ -1,9 +1,9 @@
-$primary-color: #fefcfb;
-$secondary-color: #2a2a2a;
-// $accent-color: #A8C738;
-$accent-color: #CCB80A;
-$nav-background: $secondary-color;
-$nav-link-color: $primary-color;
+$light-primary-color: #fefcfb;
+$dark-primary-color: #2a2a2a;
+$light-accent-color: #ffe837;
+$dark-accent-color: #B5558A;
+$nav-background: $dark-primary-color;
+$nav-link-color: $light-primary-color;
 
 @mixin base-font {
   font-family: 'Rubik', sans-serif;
@@ -31,7 +31,6 @@ html, body {
 
 a {
   text-decoration: none;
-  color: $accent-color;
   &:hover {
     text-decoration: underline;
   }
@@ -57,13 +56,10 @@ a.anchor {
 
 #home-section {
   margin-top: 2.73em;
-  background: $secondary-color;
   text-align: center;
-  color: $primary-color;
+  background-color: $dark-primary-color;
+  color: $light-primary-color;
   padding: .75em;
-  a {
-    color: $accent-color;
-  }
   h2, h3 {
     margin: 1em 0;
   }
@@ -78,12 +74,13 @@ a.anchor {
     #hire-button {
       border: 0;
       width: 75%;
-      background-color: $accent-color;
+      background-color: $light-accent-color;
+      border-radius: 5px;
       margin: 0 auto;
       padding: .5em;
       font-size: 1.25em;
       a {
-        color: $secondary-color;
+        color: $dark-primary-color;
       }
     }
     h3 {
@@ -94,20 +91,25 @@ a.anchor {
     margin-top: 4em;
     $title-stops: 41.75%;
     $slogan-starts: calc(#{$title-stops} + 0.05%);
-    background-image: linear-gradient(75deg, $primary-color 0% $title-stops, $secondary-color $slogan-starts 100%);
+    background-image: linear-gradient(75deg, $light-primary-color 0% $title-stops, $dark-primary-color $slogan-starts 100%);
     display: flex;
     align-items: center;
     #title-photo {
-      color: $secondary-color;
+      color: $dark-primary-color;
       padding: 2em 10em 0 10em;
       text-align: center;
       width: $title-stops;
     }
     #slogan {
       width: calc(100% - (#{$title-stops} - 2%));
+      color: $light-primary-color;
       #hire-button {
+        background-color: $light-accent-color;
         padding: 1em;
         width: 55%;
+        a {
+          color: $dark-primary-color;
+        }
       }
       h3 {
         margin: 3em 0 0 0;
@@ -117,8 +119,10 @@ a.anchor {
 }
 
 #footer {
-  background-color: $secondary-color;
-  color: $primary-color;
+  background-color: $dark-primary-color;
+  a {
+    color: $light-accent-color;
+  }
   margin: 0;
   width: 100%;
   font-size: 2em;

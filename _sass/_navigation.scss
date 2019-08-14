@@ -13,10 +13,10 @@
 /* Buttons */
 .menu-toggle {
   display: inline-block;
-  color: $primary-color;
+  color: $light-primary-color;
   padding: .75em;
   &:hover, &:focus {
-    color: $secondary-color;
+    color: $dark-primary-color;
   }
 }
 
@@ -77,10 +77,14 @@ header {
   background: $nav-background;
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   i {
-    color: $primary-color;
+    color: $light-primary-color;
   }
   #title {
     text-align: right;

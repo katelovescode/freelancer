@@ -3,7 +3,6 @@ $section-padding-desktop: 3em;
 
 .content-section {
   padding: $section-padding-mobile;
-  text-align: justify;
   h2 {
     @include emphasis-font;
     margin-bottom: 1em;
@@ -14,31 +13,33 @@ $section-padding-desktop: 3em;
 }
 
 .content-section-even {
-  background: $secondary-color;
-  color: $primary-color;
+  background: $dark-primary-color;
+  color: $light-primary-color;
   a {
+    color: $light-accent-color;
     &:hover {
-      color: $primary-color;
+      color: $light-primary-color;
     }
   }
 }
 
 .content-section-odd {
-  background: $primary-color;
-  color: $secondary-color;
+  background: $light-primary-color;
+  color: $dark-primary-color;
   a {
+    color: $dark-accent-color;
     &:hover {
-      color: $secondary-color;
+      color: $dark-primary-color;
     }
   }
 }
 
 // border colors for alternating rows
 .content-section-odd .contribution-item, .content-section-odd .experience-item {
-  border-bottom: 1px solid $secondary-color;
+  border-bottom: 1px solid $dark-primary-color;
 }
 .content-section-even .contribution-item, .content-section-even .experience-item {
-  border-bottom: 1px solid $primary-color;
+  border-bottom: 1px solid $light-primary-color;
 }
 
 
@@ -66,9 +67,6 @@ $section-padding-desktop: 3em;
   -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     display: none;
-  }
-  a {
-    color: $accent-color;
   }
   .content-container {
     display: flex;
