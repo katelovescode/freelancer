@@ -13,14 +13,61 @@ a {
   }
 }
 
+
 ::-webkit-scrollbar-track {
   display: none;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -4em;
+  visibility: hidden;
+}
+
 #home {
+  margin-top: 2.82em;
+  background: $secondary-color;
+  text-align: center;
+  color: $primary-color;
+  padding: .5em;
   a {
     color: $accent-color;
   }
+  h2, h3 {
+    margin: 1em 0;
+  }
+  #hire-button {
+    border: 0;
+    width: 75%;
+    background-color: $accent-color;
+    margin: 0 auto;
+    padding: .5em;
+    font-size: 1.25em;
+    a {
+      color: $secondary-color;
+    }
+  }
+  #title-photo {
+    img {
+      border-radius: 50%;
+      width: 85%;
+      height: 85%;
+    }
+  }
+  // @media (min-width: 768px) {
+  //   $title-stops: 41.75%;
+  //   $slogan-starts: calc(#{$title-stops} + 0.05%);
+  //   background-image: linear-gradient(75deg, $secondary-color 0% $title-stops, $primary-color $slogan-starts 100%);
+  //   margin-top: 4em;
+  //   display: flex;
+  //   #title-photo {
+  //     // padding:0;
+  //   }
+  //   #slogan {
+  //     width: calc(100% - #{$title-stops} - 1%);
+  //   }
+  // }
 }
 
 #footer {

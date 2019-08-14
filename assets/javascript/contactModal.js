@@ -1,8 +1,19 @@
 var modal = document.getElementById("contact-modal");
 var email = document.getElementById("email");
+var hireButton = document.getElementById("hire-button");
+var hireNav = document.getElementById("hire-nav");
+var email = document.getElementById("email");
 var span = document.getElementsByClassName("close")[0];
 
 email.onclick = function() {
+  modal.style.display = "block";
+}
+
+hireButton.onclick = function() {
+  modal.style.display = "block";
+}
+
+hireNav.onclick = function() {
   modal.style.display = "block";
 }
 
