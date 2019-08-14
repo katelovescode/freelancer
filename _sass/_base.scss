@@ -5,6 +5,10 @@ $accent-color: #CCB80A;
 $nav-background: $secondary-color;
 $nav-link-color: $primary-color;
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: $accent-color;
