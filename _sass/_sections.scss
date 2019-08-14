@@ -5,6 +5,7 @@ $section-padding-desktop: 3em;
   padding: $section-padding-mobile;
   text-align: justify;
   h2 {
+    @include emphasis-font;
     margin-bottom: 1em;
   }
   @media (min-width: 768px) {

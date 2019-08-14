@@ -5,8 +5,28 @@ $accent-color: #CCB80A;
 $nav-background: $secondary-color;
 $nav-link-color: $primary-color;
 
+@mixin base-font {
+  font-family: 'Rubik', sans-serif;
+}
+
+@mixin emphasis-font {
+  font-family: 'Permanent Marker', cursive;
+  @media (min-width: 768px) {
+    letter-spacing: .05em;
+    font-size: 1.5em;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+  @include base-font;
+}
+
+.logo {
+  @include emphasis-font;
 }
 
 a {
@@ -36,11 +56,11 @@ a.anchor {
 }
 
 #home-section {
-  margin-top: 2.82em;
+  margin-top: 2.73em;
   background: $secondary-color;
   text-align: center;
   color: $primary-color;
-  padding: .5em;
+  padding: .75em;
   a {
     color: $accent-color;
   }
@@ -66,6 +86,9 @@ a.anchor {
         color: $secondary-color;
       }
     }
+    h3 {
+      font-size: 1.5em;
+    }
   }
   @media (min-width: 768px) {
     margin-top: 4em;
@@ -87,7 +110,7 @@ a.anchor {
         width: 55%;
       }
       h3 {
-        margin: 4em 0 0 0;
+        margin: 3em 0 0 0;
       }
     }
   }
