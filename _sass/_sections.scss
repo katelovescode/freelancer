@@ -44,45 +44,56 @@ $section-padding-desktop: 3em;
 
 
 .two-column {
-  .content-container {
-    padding: $section-padding-mobile;
-    p {
-      padding: 0 $section-padding-mobile;
-    }
-  }
   @media (min-width: 768px) {
     .content-container {
       display: flex;
       flex-wrap: wrap;
-      padding: $section-padding-desktop;
+      justify-content: space-between;
       p {
-        flex: 0 0 50%;
+        flex: 0 0 48%;
       }
     }
   }
 }
 
+.section-nav {
+  display: flex;
+  .slide-back, .slide-forward {
+    width: 50vw;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .slide-forward {
+    text-align: right;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 #contributions {
   position: relative;
   #contributions-list {
     -webkit-overflow-scrolling: touch;
+    transition: transform .4s ease-in;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;
     }
+    & > *:not(:last-child) {
+      margin-right: 2em;
+    }
     .contribution-type {
-      flex: 0 0 95vw;
-      // & > *:not(:last-child) {
-      //   padding-bottom: .75em;
-      // }
-      // .contribution-item {
-      //   // padding: 1em 1em 1em 0;
-      // }
-      // .contribution-item:last-of-type {
-      //   border-bottom: 0;
-      // }
+      flex: 0 0 calc(100vw - calc(#{$section-padding-mobile} * 2));
+      .contribution-item {
+        padding: 1em 0;
+      }
+      .contribution-item:last-of-type {
+        border-bottom: 0;
+      }
       @media (min-width: 768px) {
         margin-right: 1.5em;
         flex: 1;
