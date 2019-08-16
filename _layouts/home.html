@@ -16,9 +16,9 @@ layout: default
     </div>
   </section>
   
-  {% assign sections = site.sections | sort: 'order' %}
+  {% assign sections = (site.sections | sort: 'order') %}
   {% for section in sections %}
-    {% assign remainder = forloop.index | modulo: 2 %}
+    {% assign remainder = (forloop.index | modulo: 2) %}
     {% if remainder == 0 %}
       <section id="{{ section.title | slugify }}-section" class="content-section content-section-even">
     {% else %}

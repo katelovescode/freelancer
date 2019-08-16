@@ -1,5 +1,5 @@
 <h3>Articles</h3>
-{% assign articles = site.articles | sort: "order"  %}
+{% assign articles = (site.articles | sort: "order")  %}
 {% for article in articles | sort: article.order  %}
   <div class="contribution-item">
     <h4>{% if article.url %}<a href="{{ article.url }}">{% endif %}{{ article.title }}{% if article.url %}</a>{% endif%}</h4>
