@@ -1,9 +1,11 @@
-<h3>Organizations</h3>
-{% assign organizations = (site.organizations | sort: "order")  %}
-{% for organization in organizations  %}
-  <div class="contribution-item">
-    <h4>{% if organization.url %}<a href="{{ organization.url }}">{% endif %}{{ organization.title }}{% if organization.url %}</a>{% endif %}</h4>
-    {% if organization.role %}<h5>{{ organization.role }}</h5>{% endif %}
-    {{ organization }}
-  </div>
-{% endfor %}
+{% if site.organizations %}
+  <h3>Organizations</h3>
+  {% assign organizations = site.organizations | sort: "order"  %}
+  {% for organization in organizations  %}
+    <div class="contribution-item">
+      <h4>{% if organization.url %}<a href="{{ organization.url }}">{% endif %}{{ organization.title }}{% if organization.url %}</a>{% endif %}</h4>
+      {% if organization.role %}<h5>{{ organization.role }}</h5>{% endif %}
+      {{ organization }}
+    </div>
+  {% endfor %}
+{% endif %}

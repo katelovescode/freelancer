@@ -16,20 +16,22 @@ layout: default
     </div>
   </section>
   
-  {% assign sections = (site.sections | sort: 'order') %}
-  {% for section in sections %}
-    {% assign remainder = (forloop.index | modulo: 2) %}
-    {% if remainder == 0 %}
-      <section id="{{ section.title | slugify }}-section" class="content-section content-section-even">
-    {% else %}
-      <section id="{{ section.title | slugify }}-section" class="content-section content-section-odd">
-    {% endif %}
-    <a class="anchor" name="{{ section.title | slugify }}"></a><h2>{{ section.title }}</h2>
-    {% if section.include != null %}
-      {% include {{ section.include }} %}
-    {% else %}
-      {% include sections/default.html %}
-    {% endif %}
-    </section>
-  {% endfor %}
-</div>
+  {% if site.sections %}
+    {% assign sections = site.sections | sort: 'order' %}
+    {% for section in sections %}
+      {% assign remainder = forloop.index | modulo: 2 %}
+      {% if remainder == 0 %}
+        <section id="{{ section.title | slugify }}-section" class="content-section content-section-even">
+      {% else %}
+        <section id="{{ section.title | slugify }}-section" class="content-section content-section-odd">
+      {% endif %}
+      <a class="anchor" name="{{ section.title | slugify }}"></a><h2>{{ section.title }}</h2>
+      {% if section.include != null %}
+        {% include {{ section.include }} %}
+      {% else %}
+        {% include sections/default.html %}
+      {% endif %}
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}

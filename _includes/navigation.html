@@ -19,18 +19,20 @@
     </a>
     <ul>
       <li class="navigation-item" id="hire-nav"><a href="#contact-modal">Let's Work Together!</a></li>
-      {% assign sections = (site.sections | sort: 'order') %}
-      {% for section in sections %}
-        <li class="navigation-item"><a href="#{{ section.title | slugify }}">{{ section.title }}</a></li>
-        {% if section.title == "Contributions" %}
-          <ul class="sublinks">
-            {% assign contributions = (site.data.contributions | sort: 'order') %}
-            {% for contribution_type in contributions %}
-              <li><a class="sublink" href="#{{ contribution_type.type }}">{{ contribution_type.type | capitalize }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endfor %}
+      {% if site.sections %}
+        {% assign sections = site.sections | sort: 'order' %}
+        {% for section in sections %}
+          <li class="navigation-item"><a href="#{{ section.title | slugify }}">{{ section.title }}</a></li>
+          {% if section.title == "Contributions" %}
+            <ul class="sublinks">
+              {% assign contributions = site.data.contributions | sort: 'order' %}
+              {% for contribution_type in contributions %}
+                <li><a class="sublink" href="#{{ contribution_type.type }}">{{ contribution_type.type | capitalize }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </ul>
   </nav>
   <a href="#main-menu-toggle"

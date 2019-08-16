@@ -1,8 +1,10 @@
-<div id="contributions-list">
-  {% assign contributions = (site.data.contributions | sort: 'order') %}
-  {% for contribution_type in contributions %}
-    <a class="anchor" name="{{ contribution_type.type }}"></a><div class="contribution-type">
-      {% include sections/{{ contribution_type.type }}.html %}
-    </div>
-  {% endfor %}
-</div>
+{% if site.data.contributions %}
+  <div id="contributions-list">
+    {% assign contributions = site.data.contributions | sort: 'order' %}
+    {% for contribution_type in contributions %}
+      <a class="anchor" name="{{ contribution_type.type }}"></a><div class="contribution-type">
+        {% include sections/{{ contribution_type.type }}.html %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
