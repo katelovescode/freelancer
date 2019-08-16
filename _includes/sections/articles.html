@@ -1,11 +1,11 @@
-<div class="articles">
-    <h3>Articles</h3>
-    {% assign articles = site.articles | sort: "order"  %}
-    {% for article in articles | sort: article.order  %}
-      <div class="contribution-item">
-        <h4>{% if article.url %}<a href="{{ article.url }}">{% endif %}{{ article.title }}{% if article.url %}</a>{% endif%}</h4>
-        <h5>{% if article.publication %}{% if article.publicationurl %}<a href="{{ article.publicationurl }}">{% endif %}{{ article.publication }}{% if article.publicationurl %}</a>{% endif %}{% endif %}{% if article.publication and article.date %} | {% endif %}{% if article.date %}{{ article.date | date: "%b %d, %Y" }}{% endif %}</h5>
-        {{ article }}
-      </div>
-    {% endfor %}
-  </div>
+{% if site.articles %}
+  <h3>Articles</h3>
+  {% assign articles = site.articles | sort: "order"  %}
+  {% for article in articles | sort: article.order  %}
+    <div class="contribution-item">
+      <h4>{% if article.url %}<a href="{{ article.url }}">{% endif %}{{ article.title }}{% if article.url %}</a>{% endif%}</h4>
+      {% if article.publication %}<h5>{% if article.publicationurl %}<a href="{{ article.publicationurl }}">{% endif %}{{ article.publication }}{% if article.publicationurl %}</a>{% endif %}{% endif %}{% if article.publication and article.date %} | {% endif %}{% if article.date %}{{ article.date | date: "%b %d, %Y" }}</h5>{% endif %}
+      {{ article }}
+    </div>
+  {% endfor %}
+{% endif %}

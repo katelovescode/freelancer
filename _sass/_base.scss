@@ -11,14 +11,10 @@ $nav-link-color: $light-primary-color;
 
 @mixin emphasis-font {
   font-family: 'Permanent Marker', cursive;
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     letter-spacing: .05em;
     font-size: 1.5em;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 html, body {
@@ -30,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   & > a {
     font-weight: 500;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     letter-spacing: 0.75px;
   }
 }
@@ -57,9 +53,9 @@ p {
 a.anchor {
   display: block;
   position: relative;
-  top: -3.5em;
+  top: -2.5em;
   visibility: hidden;
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     top: -5em;
   }
 }
@@ -74,13 +70,15 @@ a.anchor {
     margin: 1em 0;
   }
   #title-photo {
+    flex: 1.5;
     img {
       border-radius: 50%;
-      width: 85%;
-      height: 85%;
+      max-width: 20em;
+      min-width: 5em;
     }
   }
   #slogan {
+    flex: 2;
     #hire-button {
       border: 0;
       width: 75%;
@@ -98,17 +96,23 @@ a.anchor {
     }
   }
   @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > * {
+      margin: 1em;
+    }
+  }
+  @media (min-width: 1025px) {
     margin-top: 4em;
+    padding: 0;
     $title-stops: 41.75%;
     $slogan-starts: calc(#{$title-stops} + 0.05%);
     background-image: linear-gradient(75deg, $light-primary-color 0% $title-stops, $dark-primary-color $slogan-starts 100%);
-    display: flex;
-    align-items: center;
     #title-photo {
       color: $dark-primary-color;
-      padding: 2em 10em 0 10em;
+      padding-top: 2em;
       text-align: center;
-      width: $title-stops;
     }
     #slogan {
       width: calc(100% - (#{$title-stops} - 2%));
@@ -122,7 +126,7 @@ a.anchor {
         }
       }
       h3 {
-        margin: 3em 0 0 0;
+        margin: 3em 2em 0 2em;
       }
     }
   }
@@ -145,7 +149,7 @@ a.anchor {
     height: 3em;
     display: flex;
     justify-content: space-between;
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       width: 30%;
     }
   }

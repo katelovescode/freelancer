@@ -2,6 +2,7 @@
       <div id="contact-box">
         {% if site.twitter_username %}<div id="twitter" class="contact-icon"><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" aria-label="Find me on Twitter"><i class="fab fa-twitter"></i></a></div>{% endif %}
         {% if site.github_username %}<div id="github" class="contact-icon"><a href="https://github.com/{{ site.github_username }}" target="_blank" aria-label="Find me on Github"><i class="fab fa-github"></i></a></div>{% endif %}
+        {% if site.linkedin_username %}<div id="linkedin" class="contact-icon"><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" aria-label="Find me on LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>{% endif %}
         {% if site.email %}<div id="email" class="contact-icon"><a href="#contact-modal" aria-label="Contact me to work together!"><i class="far fa-envelope"></i></a></div>{% endif %}
       </div>
     </div>
@@ -24,7 +25,6 @@
         </div>
       </div>
     </div>
-    <script src="/assets/javascript/contentScroll.js"></script>
     <script src="/assets/javascript/contactModal.js"></script>
   </body>
 </html>

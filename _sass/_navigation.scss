@@ -45,6 +45,9 @@
   min-height: 100%;
   width: 200px;
   background: #1a1a1a;
+  &.sublinks {
+    padding: 0;
+  }
 }
 
 .main-menu a {
@@ -55,6 +58,11 @@
   color: $nav-link-color;
   text-decoration: none;
   border-bottom: 1px solid #383838;
+  &.sublink {
+    padding-left: 2em;
+    background-color: #666;
+    border: 0;
+  }
 }
 
 .main-menu li:first-child a {
@@ -147,7 +155,7 @@ header {
 /*
  Larger screen styling - horizontal menu
 */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
 
   header {
     width: 100%;
@@ -199,5 +207,9 @@ header {
   .main-menu a:hover,
   .main-menu a:focus {
     background: none; /* Remove background from off-canvas styling */
+  }
+
+  ul.sublinks {
+    display: none;
   }
 }

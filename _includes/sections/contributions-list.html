@@ -1,14 +1,10 @@
-<div class="section-nav">
-  <div class="slide-back" aria-label="Scroll contributions back"><i class="fas fa-angle-left"></i></div>
-  <div class="slide-forward" aria-label="Scroll contributions forward"><i class="fas fa-angle-right"></i></div>
-</div>
-<div id="contributions">
+{% if site.data.contributions %}
   <div id="contributions-list">
     {% assign contributions = site.data.contributions | sort: 'order' %}
     {% for contribution_type in contributions %}
-      <div class="contribution-type">
+      <a class="anchor" name="{{ contribution_type.type }}"></a><div class="contribution-type">
         {% include sections/{{ contribution_type.type }}.html %}
       </div>
     {% endfor %}
   </div>
-</div>
+{% endif %}
