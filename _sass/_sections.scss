@@ -7,7 +7,7 @@ $section-padding-desktop: 3em;
     @include emphasis-font;
     margin-bottom: 1em;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     padding: $section-padding-desktop;
   }
 }
@@ -44,7 +44,7 @@ $section-padding-desktop: 3em;
 
 
 .two-column {
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     .content-container {
       display: flex;
       flex-wrap: wrap;
@@ -60,6 +60,9 @@ $section-padding-desktop: 3em;
   .contribution-type {
     .contribution-item {
       padding-bottom: 1em;
+      &:last-of-type {
+        border: 0;
+      }
     }
   }
   h3, h4, h5, h6 {
@@ -69,7 +72,7 @@ $section-padding-desktop: 3em;
     @include emphasis-font;
     font-size: 1.25em;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1025px) {
     display: flex;
     .contribution-type {
       margin-right: 1.5em;

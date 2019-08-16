@@ -13,17 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your Name
-author: Your Name
+title: Kate Donaldson
+author: Kate Donaldson
 email: kate@katelovescode.com
-slogan: quippy slogan here
-briskformscode: cbe05bf9ce9e8b4a3612d7caa5e3d6c0
+slogan: Kate Donaldson
+briskformscode: 47e1027133b01f7511d472adc3dd7037
 description: >- # this means to ignore newlines until "baseurl:"
-  Longer description of your site and skills goes here probably
+  technical leader &middot; thought partner &middot; collaborator
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://yoururl.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: yourtwittername
-github_username:  yourgithubname
+url: "http://www.katelovescode.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: katelovescode
+github_username: katelovescode
+linkedin_username: katelovescode
 
 # Build settings
 markdown: kramdown
