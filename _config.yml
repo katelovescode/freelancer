@@ -29,7 +29,7 @@ github_username:  yourgithubname
 markdown: kramdown
 sass:
   style: compressed
-collections_dir: assets/collections
+collections_dir: _includes/collections
 collections:
   - articles
   - experiences
